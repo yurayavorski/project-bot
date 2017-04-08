@@ -1,5 +1,6 @@
 #main-screen {
     float: left;
-    width: calc(100% - 307px);
-
+    width: calc(100% - 350px);
+    text-align: left;
+    padding-left: 40px;
 }
