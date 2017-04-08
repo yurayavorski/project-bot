@@ -1,0 +1,5 @@
+#main-screen {
+    float: left;
+    width: calc(100% - 307px);
+
+}

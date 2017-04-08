@@ -1,0 +1,35 @@
+#left-menu {
+    background-color: #D9DDE3;
+    float: left;
+    width: 16%;
+    min-width: 230px;
+    height: 100vh;
+    position: relative;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.btn-menu {
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.btn-logout {
+    background-color: #553535;
+    width: 150px;
+    margin-top: 10px;
+}
+#menu-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+#user-info {
+    padding-top: 20px;
+}
+#user-info img {
+    width: 200px;
+    border-radius: 100px;
+}
