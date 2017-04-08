@@ -17,7 +17,7 @@ export class AddAccountsComponent implements OnInit {
     this.socials = this.service.getSocials();
   }
 
-  socialClick(id: number) {
-    alert(id);
+  socialClick(social: Social) {
+    alert(social.id);
   }
 }
