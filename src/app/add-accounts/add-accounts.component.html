@@ -3,7 +3,7 @@
   <h3>{{subtitle}}</h3>
 
   <div id="socials-set">
-    <div class="soc-el" *ngFor = "let social of socials" (click) = "socialClick(social.idgit)">
+    <div class="soc-el" *ngFor = "let social of socials" (click) = "socialClick(social.id)">
       <img src="{{social.imgSrc}}" alt="">
     </div>
   </div>
