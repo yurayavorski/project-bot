@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../shared/common.service'
+import { Social } from '../shared/CSocial'
 
 @Component({
   selector: 'app-add-accounts',
@@ -8,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class AddAccountsComponent implements OnInit {
   title: string = "Add accounts";
   subtitle: string = "The more accounts you add, the more comfortable it will be for you";
-  constructor() { }
+  socials: Social[];
+  constructor(private service: CommonService) { }
 
   ngOnInit() {
+    this.socials = this.service.getSocials();
   }
 
+  socialClick(id: number) {
+    alert(id);
+  }
 }
