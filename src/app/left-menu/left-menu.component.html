@@ -1,26 +1,28 @@
 <div id="left-menu">
-  <div id="user-info">
-    <img src="{{ userInfo.imgSource }}" alt="">
-    <h3>{{ userInfo.name }}</h3>
-  </div>
-  <hr />
-  <ul>
-    <li>
-      <a routerLink="messages" class="btn-def btn-menu">Messages</a>
-    </li>
-    <li>
-      <a routerLink="new-post" class="btn-def btn-menu">Create a post</a>
-    </li>
-    <li>
-      <a routerLink="old-post" class="btn-def btn-menu">View old posts</a>
-    </li>
-    <li>
-      <hr />
-      <a routerLink="add-accounts" class="btn-def btn-menu">Add accounts</a>
-    </li>
-  </ul>
-  <div id="menu-bottom">
-  <hr />
-  <a href="#" class="btn-def btn-logout">Logout</a>
+  <div id="left-menu-wrapper">
+    <div id="user-info">
+      <img src="{{ userInfo.imgSource }}" alt="">
+      <h3>{{ userInfo.name }}</h3>
+    </div>
+    <hr />
+    <ul>
+      <li>
+        <a routerLink="messages" class="btn-def btn-menu">Messages</a>
+      </li>
+      <li>
+        <a routerLink="new-post" class="btn-def btn-menu">Create a post</a>
+      </li>
+      <li>
+        <a routerLink="old-post" class="btn-def btn-menu">View old posts</a>
+      </li>
+      <li>
+        <hr />
+        <a routerLink="add-accounts" class="btn-def btn-menu">Add accounts</a>
+      </li>
+    </ul>
+    <div id="menu-bottom">
+    <hr />
+    <a href="#" class="btn-def btn-logout">Logout</a>
+    </div>
   </div>
 </div>

@@ -1,10 +1,16 @@
 #left-menu {
     background-color: #D9DDE3;
-    float: left;
     width: 16%;
-    min-width: 230px;
+    min-width: 260px;
     height: 100vh;
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+@media (max-height: 610px) {
+    #left-menu {
+        overflow: scroll;
+    }
 }
 ul {
     margin: 0;
@@ -35,4 +41,17 @@ ul hr {
 #user-info img {
     width: 200px;
     border-radius: 100px;
+}
+@media (max-width: 1400px) {
+    #user-info img {
+        width: 130px;
+    }
+    #user-info h3 {
+        margin-top: 0;
+    }
+}
+#left-menu-wrapper {
+    height: 100vh;
+    min-height: 610px;
+    position: relative;
 }
