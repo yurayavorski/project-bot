@@ -26,6 +26,9 @@ ul hr {
     border-radius: 20px;
     margin-top: 30px;
 }
+.btn-menu.active {
+    background-color: #5B475E;
+}
 .btn-logout {
     background-color: #553535;
     width: 150px;

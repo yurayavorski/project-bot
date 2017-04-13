@@ -22,6 +22,15 @@ export class AddAccountsComponent implements OnInit {
     this.socials = this.service.getSocials();
   }
 
+  getImage(social: Social): string {
+    let nameArray = social.imgSrc.split('.');
+    if (social.logInStatus) {
+      return nameArray[0] + '-white.' + nameArray[1];
+    }
+    else
+      return nameArray[0] + '.' + nameArray[1];
+  }
+
   socialClick(social: Social) {
     social.logInStatus = !social.logInStatus;
     // window.location.href="https://oauth.vk.com/authorize?client_id=5901447&scope=ads,audio,docs,email,friends,groups,pages,wall,notes,notifications,notify,stats,status&redirect_uri=https://homeless.ngrok.io/generatecode&display=page&response_type=code&v=5.62";

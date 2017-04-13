@@ -1,4 +1,4 @@
-<div id="create-post">
+<div id="create-post"  #createpost>
   <h1>{{title}}</h1>
   <h3>{{subtitle}}</h3>
 
@@ -30,6 +30,7 @@
 </div>
 
 <div id="no-social" *ngIf="noSocials()">
+  {{showPopUp(createpost)}}
   <div id="nosoc-message">
     <h3>You haven't added any social account</h3>
     <a routerLink="/add-accounts" class="btn-def">Go to add account page</a>
@@ -37,8 +38,11 @@
 </div>
 
 <div id="no-social" *ngIf="noSocialsChosen">
+
+  {{showPopUp(createpost)}}
   <div id="nosoc-message">
     <h3>Choose social networks you want to post</h3>
-    <button class="btn-def" (click)="noSocialsChosen = false">OK</button>
+    <button class="btn-def" (click)="noSocialsChosen = false; hidePopUp(createpost)">OK</button>
   </div>
+
 </div>

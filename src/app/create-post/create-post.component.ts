@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../shared/common.service';
 import { Social } from '../shared/CSocial'
 import {socials} from "../shared/socials";
+import {split} from "ts-node/dist/index";
 
 @Component({
   selector: 'create-post',
@@ -15,6 +16,7 @@ export class CreatePostComponent implements OnInit {
   noSocialsChosen: boolean = false;
   socials: Social[] = [];
   socialsToPost: Social[] = [];
+  popupIsShown: boolean = false;
   constructor(private service: CommonService) { }
 
   ngOnInit() {
@@ -49,5 +51,20 @@ export class CreatePostComponent implements OnInit {
       return;
     }
     //THIS IS FOR IHOOOOOOOOR
+  }
+
+  showPopUp(div: HTMLDivElement) {
+
+      div.style.height = "100vh";
+      div.style.padding = "0";
+      div.style.overflow = "hidden";
+
+  }
+  hidePopUp(div: HTMLDivElement) {
+
+      div.style.height = "inherit";
+      div.style.padding = "inherit";
+      div.style.overflow = "inherit";
+
   }
 }
