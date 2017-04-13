@@ -1,5 +1,6 @@
 #left-menu {
     background-color: #D9DDE3;
+    box-shadow: 5px 0 10px rgba(0,0,0,0.2);
     width: 16%;
     min-width: 260px;
     height: 100vh;
@@ -50,7 +51,7 @@ ul hr {
         margin-top: 0;
     }
 }
-#left-menu-wrapper {
+#left-menu-inner {
     height: 100vh;
     min-height: 610px;
     position: relative;

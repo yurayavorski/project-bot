@@ -4,7 +4,7 @@
 
   <div id="socials-set">
     <div class="soc-el" *ngFor = "let social of socials" (click) = "socialClick(social)" [ngClass]="{ 'logined': social.logInStatus }">
-      <img src="{{social.imgSrc}}" alt="">
+      <img src="{{imagePath + social.imgSrc}}" alt="">
     </div>
   </div>
 </div>

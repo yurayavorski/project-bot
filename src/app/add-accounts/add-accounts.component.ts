@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonService } from '../shared/common.service'
-import { Social } from '../shared/CSocial'
+import { CommonService } from '../shared/common.service';
+import { Social } from '../shared/CSocial';
 import {Http, Response} from "@angular/http";
 import {Observable} from "rxjs";
-import {error} from "util";
 
 
 
@@ -15,6 +14,7 @@ import {error} from "util";
 export class AddAccountsComponent implements OnInit {
   title: string = "Add accounts";
   subtitle: string = "The more accounts you add, the more comfortable it will be for you";
+  imagePath: string = "/assets/add-accounts/";
   socials: Social[];
   constructor(private service: CommonService, private http:Http) { }
 
@@ -23,6 +23,7 @@ export class AddAccountsComponent implements OnInit {
   }
 
   socialClick(social: Social) {
-    window.location.href="https://oauth.vk.com/authorize?client_id=5901447&scope=ads,audio,docs,email,friends,groups,pages,wall,notes,notifications,notify,stats,status&redirect_uri=https://homeless.ngrok.io/generatecode&display=page&response_type=code&v=5.62";
+    social.logInStatus = !social.logInStatus;
+    // window.location.href="https://oauth.vk.com/authorize?client_id=5901447&scope=ads,audio,docs,email,friends,groups,pages,wall,notes,notifications,notify,stats,status&redirect_uri=https://homeless.ngrok.io/generatecode&display=page&response_type=code&v=5.62";
   }
 }

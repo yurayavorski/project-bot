@@ -2,33 +2,43 @@
   <h1>{{title}}</h1>
   <h3>{{subtitle}}</h3>
 
-  <form action="">
-    <textarea name="message" placeholder="What's new?"></textarea>
+  <form (submit)="sendPost(message.value, $event)">
+    <textarea placeholder="What's new?" #message ></textarea>
     <div class="buttons-group">
       <a href="#" class="btn-def">Attach</a>
-      <a href="#" class="btn-def">Send</a>
+      <button type="submit" class="btn-def">Send</button>
       <div class="clr"></div>
     </div>
 
     <span>Choose social networks you want to post</span>
     <div id="socials-switch">
-      <div class="switch-el">
-        <img src="/assets/create-post/fb.png" alt="">
+      <div class="switch-el" *ngFor="let social of socials">
+        <div *ngIf="social.logInStatus" >
+          <img src="{{imagePath + social.imgSrc}}" alt="">
 
-        <label class="switch">
-          <input type="checkbox">
-          <div class="slider round"></div>
-        </label>
+
+          <label class="switch">
+            <input type="checkbox" #switchin (change)="socialToggle(social, switchin)">
+            <div class="slider round"></div>
+          </label>
+
+        </div>
       </div>
 
-      <div class="switch-el">
-        <img src="/assets/create-post/vk.png" alt="">
-
-        <label class="switch">
-          <input type="checkbox">
-          <div class="slider round"></div>
-        </label>
-      </div>
     </div>
   </form>
+</div>
+
+<div id="no-social" *ngIf="noSocials()">
+  <div id="nosoc-message">
+    <h3>You haven't added any social account</h3>
+    <a routerLink="/add-accounts" class="btn-def">Go to add account page</a>
+  </div>
+</div>
+
+<div id="no-social" *ngIf="noSocialsChosen">
+  <div id="nosoc-message">
+    <h3>Choose social networks you want to post</h3>
+    <button class="btn-def" (click)="noSocialsChosen = false">OK</button>
+  </div>
 </div>
